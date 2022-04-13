@@ -13,9 +13,18 @@ const connect = function () {
     console.log('Server says: ', data);
   });
 
+  conn.on("connect", () =>{
+    console.log("Successfully connected to game coordinator");
+  });
+
+  conn.on('connect', () => {
+    conn.write('Name: LMK');
+  });
+
   return conn;
 };
 
 module.exports = {
   connect
 };
+
