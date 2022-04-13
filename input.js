@@ -22,6 +22,10 @@ const handleUserInput = function (key) {
     connection.write("Move: right")
   };
 
+  if (key === "y"){
+    connection.write("Say: Ethelbert incoming!!")
+  };
+
 };
 
 const setupInput = (conn) => {
